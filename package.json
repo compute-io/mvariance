@@ -1,6 +1,6 @@
 {
   "name": "compute-mvariance",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Computes a moving sample variance over a numeric array.",
   "author": {
     "name": "Athan Reines",
