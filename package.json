@@ -25,7 +25,23 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "mathematics",
+    "math",
+    "statistics",
+    "stats",
+    "timeseries",
+    "arithmetic",
+    "variance",
+    "sample variance",
+    "stdev",
+    "standard deviation",
+    "sample standard deviation",
+    "moving",
+    "window",
+    "array",
+    "dispersion",
+    "sliding"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/mvariance/issues"

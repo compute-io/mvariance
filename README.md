@@ -1,8 +1,8 @@
-mvariance
+Moving Sample Variance
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes a moving sample variance over a numeric array.
+> Computes a moving (sliding window) sample variance over a numeric array.
 
 
 ## Installation
@@ -19,18 +19,39 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var foo = require( 'compute-mvariance' );
+var mvariance = require( 'compute-mvariance' );
 ```
 
-#### foo( arr )
+#### mvariance( arr, window )
 
-What does this function do?
+Slides a `window` over a numeric `array` to compute a moving sample variance.
+
+``` javascript
+var data = [ 1, 5, 0, 10, 2 ];
+
+var arr = mvariance( data, 3 );
+// returns [ 7, 25, 28 ]
+```
+
+Note: the returned `array` has length `L - W + 1`, where `L` is the length of the input `array` and `W` is the `window` size. 
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-mvariance' );
+var mvariance = require( 'compute-mvariance' );
+
+// Simulate some data...
+var data = new Array( 50 );
+
+for ( var i = 0; i < data.length; i++ ) {
+	data[ i ] = Math.random() * 100;
+}
+
+// Compute the moving sample variance:
+var arr = mvariance( data, 7 );
+
+console.log( arr.join( '\n' ) );
 ```
 
 To run the example code from the top-level application directory,
